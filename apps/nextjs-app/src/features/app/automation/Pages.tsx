@@ -10,7 +10,7 @@ export function AutomationPage() {
       <div className="flex h-full items-center justify-center p-4">
         <Alert className="w-[400px]">
           <AlertTitle>
-            <span className="text-lg">🏗️</span> Coming soon
+            <span className="text-lg">🏗️</span> Coming not soon :(
           </AlertTitle>
           <AlertDescription>Automation is under development</AlertDescription>
         </Alert>

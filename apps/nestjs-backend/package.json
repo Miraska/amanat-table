@@ -1,7 +1,7 @@
 {
   "name": "@teable/backend",
   "version": "1.5.2",
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "private": true,
   "main": "dist/index.js",
   "exports": {
