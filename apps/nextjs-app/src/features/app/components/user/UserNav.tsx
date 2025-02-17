@@ -48,12 +48,12 @@ export const UserNav: React.FC<React.PropsWithChildren> = (props) => {
           <Settings className="size-4 shrink-0" />
           {t('settings.nav.settings')}
         </DropdownMenuItem>
-        <DropdownMenuItem className="flex gap-2" asChild>
+        {/* <DropdownMenuItem className="flex gap-2" asChild>
           <a href={t('help.mainLink')} target="_blank" rel="noreferrer">
             <HelpCircle className="size-4 shrink-0" />
             {t('help.title')}
           </a>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
         {isCloud && (
           <DropdownMenuItem className="flex gap-2" onClick={() => router.push('/setting/license')}>
             <License className="size-4 shrink-0" />

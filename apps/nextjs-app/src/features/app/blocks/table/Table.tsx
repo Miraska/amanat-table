@@ -58,8 +58,8 @@ export const Table: React.FC<ITableProps> = ({
       <Head>
         <title>
           {table?.name
-            ? `${table?.icon ? table.icon + ' ' : ''}${table.name}: ${baseServerData.name} - Teable`
-            : 'Teable'}
+            ? `${table?.icon ? table.icon + ' ' : ''}${table.name}: ${baseServerData.name} - Amanat`
+            : 'Amanat'}
         </title>
         <style data-fullcalendar></style>
       </Head>

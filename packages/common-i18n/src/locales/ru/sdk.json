@@ -253,7 +253,7 @@
       "baseTableImport": "Импортировать данные в базу",
       "baseTableExport": "Экспортировать данные из базы",
       "baseAuthorityMatrixConfig": "Настроить матрицу полномочий",
-      "baseDbConnect": "Подключение к базе данных",
+      "baseDbConnect": "Подключение к бд",
       "tableCreate": "Создать таблицу",
       "tableRead": "Читать таблицу",
       "tableDelete": "Удалить таблицу",

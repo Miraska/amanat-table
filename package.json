@@ -3,14 +3,14 @@
   "version": "1.5.2",
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/teableio/teable",
+  "homepage": "https://github.com/Miraska/amanat-table",
   "repository": {
     "type": "git",
-    "url": "https://github.com/teableio/teable"
+    "url": "https://github.com/Miraska/amanat-table"
   },
   "author": {
     "name": "tea artist",
-    "url": "https://github.com/tea-artist"
+    "url": "https://github.com/Miraska"
   },
   "keywords": [
     "teable",

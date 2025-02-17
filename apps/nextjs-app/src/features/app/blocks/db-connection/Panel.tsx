@@ -132,11 +132,11 @@ export const DbConnectionPanel = ({ className }: { className?: string }) => {
           <Code2 className="size-4" />
           <h2 className="font-semibold">{t('table:connection.title')}</h2>
         </div>
-        <Button variant="ghost" size="icon">
+        {/* <Button variant="ghost" size="icon">
           <a href={t('table:connection.helpLink')} target="_blank" rel="noreferrer">
             <HelpCircle className="size-4" />
           </a>
-        </Button>
+        </Button> */}
       </div>
       <p className="mb-2 text-sm text-muted-foreground">{t('table:connection.description')}</p>
       {permissions?.['base|db_connection'] ? <ContentCard /> : t('table:connection.noPermission')}

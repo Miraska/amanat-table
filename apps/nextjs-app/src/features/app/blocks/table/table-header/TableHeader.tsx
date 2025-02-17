@@ -106,11 +106,11 @@ const RightList = ({
             <Settings className="size-4" />
           </Link>
         </Button>
-        <Button asChild variant="ghost" size="xs" className={cn('flex', buttonClassName)}>
+        {/* <Button asChild variant="ghost" size="xs" className={cn('flex', buttonClassName)}>
           <a href={t('help.mainLink')} title={t('help.title')} target="_blank" rel="noreferrer">
             <HelpCircle className="size-4" />
           </a>
-        </Button>
+        </Button> */}
       </div>
       <BaseCollaboratorModalTrigger
         base={{
@@ -243,11 +243,11 @@ const RightMenu = ({ className }: { className?: string }) => {
               <Settings className="size-4" /> {t('table:table.design')}
             </Link>
           </Button>
-          <Button asChild variant="ghost" size="xs" className="flex justify-start">
+          {/* <Button asChild variant="ghost" size="xs" className="flex justify-start">
             <a href={t('help.mainLink')} title={t('help.title')} target="_blank" rel="noreferrer">
               <HelpCircle className="size-4" /> {t('help.title')}
             </a>
-          </Button>
+          </Button> */}
         </div>
       </PopoverContent>
     </Popover>

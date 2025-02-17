@@ -54,7 +54,7 @@ export async function setUpAppMiddleware(app: INestApplication, configService: C
     const redocOptions: RedocOptions = {
       logo: {
         backgroundColor: '#F0F0F0',
-        altText: 'Teable logo',
+        altText: 'Amanat logo',
       },
     };
     await RedocModule.setup('/redocs', app, openApiDocumentation as OpenAPIObject, redocOptions);
@@ -96,7 +96,7 @@ export async function bootstrap() {
   const port = await getAvailablePort(configService.get<string>('PORT') as string);
   process.env.PORT = port.toString();
 
-  await app.listen(port);
+  await app.listen(port, '0.0.0.0');
 
   const now = new Date();
   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;

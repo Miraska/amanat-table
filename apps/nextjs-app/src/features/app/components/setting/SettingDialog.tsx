@@ -21,7 +21,7 @@ export const SettingDialog = () => {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="h-5/6 max-h-[800px] max-w-6xl">
         <Tabs defaultValue="profile" className="flex min-h-[40rem] gap-4 pt-4">
-          <TabsList className="grid w-36 gap-2 bg-inherit text-left">
+          <TabsList className="grid w-36 gap-3 bg-inherit text-left">
             <TabsTrigger
               value="profile"
               className="w-36 justify-start gap-2 font-normal data-[state=active]:bg-muted data-[state=active]:font-medium"

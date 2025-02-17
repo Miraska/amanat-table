@@ -48,7 +48,7 @@ export const ShareViewPage = (props: IShareViewPageProps) => {
     >
       <ShareViewContext.Provider value={props.shareViewData}>
         <Head>
-          <title>{view?.name ?? 'Teable'}</title>
+          <title>{view?.name ?? 'Amanat'}</title>
         </Head>
         <AppLayout>
           <SessionProvider

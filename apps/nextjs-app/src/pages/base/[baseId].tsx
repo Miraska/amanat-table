@@ -21,7 +21,7 @@ const Node: NextPageWithLayout = () => {
         <div className="flex h-full flex-col items-center justify-center p-4">
           <ul className="mb-4 space-y-2 text-left">
             <li>{t('table:welcome.description')}</li>
-            <li>
+            {/* <li>
               <Trans
                 ns="table"
                 i18nKey="welcome.help"
@@ -38,7 +38,7 @@ const Node: NextPageWithLayout = () => {
                   ),
                 }}
               ></Trans>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

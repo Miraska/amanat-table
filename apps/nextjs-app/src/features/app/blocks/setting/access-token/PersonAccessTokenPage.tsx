@@ -38,10 +38,7 @@ export const PersonAccessTokenPage = () => {
   }, [router.query]);
 
   return (
-    <SettingRight
-      title={<PersonAccessTokenTitle backList={backList} />}
-      helpLink={t('help.apiLink')}
-    >
+    <SettingRight>
       <div className="my-3 space-y-1">
         {formType ? (
           <PersonAccessTokenForm onSubmit={onSubmit} onRefresh={onRefresh} onCancel={backList} />
