@@ -287,7 +287,7 @@ switch ($Action) {
     # ---- DB modes ----
     "sqlite.mode"    { Activate-SqliteMode; break }
     "postgres.mode"  { Activate-PostgresMode; break }
-    "switch-db-mode" { Switch-DbMode; break }
+    "switch-db" { Switch-DbMode; break }
 
     # ---- Help ----
     "help" {
@@ -301,7 +301,7 @@ switch ($Action) {
         Write-Host "  docker.await <service>    - Wait for container(s) health"
         Write-Host "  sqlite.mode               - Migrate & generate prisma for sqlite"
         Write-Host "  postgres.mode             - Migrate & generate prisma for postgres"
-        Write-Host "  switch-db-mode            - Interactive DB switch"
+        Write-Host "  switch-db                 - Interactive DB switch"
         break
     }
 

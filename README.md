@@ -85,12 +85,12 @@ pnpm install
 
 на macOS или Linux
 ```sh
-make switch-db-mode
+make switch-db
 ```
 
 на Windows
 ```sh
-./build.ps1 switch-db-mode
+./build.ps1 switch-db
 ```
 
 #### 3. Настраиваемые переменные среды（Опционально）

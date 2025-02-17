@@ -296,7 +296,7 @@ else ifeq ($(CI)-$(RUN_DB_MODE),0-postges)
 	done
 endif
 
-switch-db-mode:		## Switch Database environment
+switch-db:		## Switch Database environment
 	$(print_db_mode_options)
 	@read -p "Enter a command: " command; \
     if [ "$$command" = "1" ] || [ "$$command" = "sqlite" ]; then \
