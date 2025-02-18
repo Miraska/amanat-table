@@ -44,7 +44,7 @@
 
 ```
 .
-├── apps (AGPL 3.0) 
+├── apps (AGPL 3.0)
 │   ├── nextjs-app          (front-end)
 │   └── nestjs-backend      (backend)
 ├── packages (MIT)
@@ -84,13 +84,15 @@ pnpm install
 #### 2. Выбор бд (для разработки удобнее sqlite)
 
 на macOS или Linux
+
 ```sh
 make switch-db
 ```
 
 на Windows
+
 ```sh
-./build.ps1 switch-db
+build.ps1 switch-db
 ```
 
 #### 3. Настраиваемые переменные среды（Опционально）
@@ -110,8 +112,10 @@ pnpm dev
 ```
 
 По умолчанию сервер разработки плагинов не запущен. Для предварительного просмотра и разработки плагинов запустите:
+
 ```sh
 cd plugins
 pnpm dev
 ```
+
 Это запустит сервер разработки плагинов на порту 3002.
