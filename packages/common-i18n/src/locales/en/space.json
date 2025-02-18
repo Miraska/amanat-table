@@ -1,7 +1,7 @@
 {
   "initialSpaceName": "{{name}}'s space",
   "page": {
-    "title": "Teable App"
+    "title": "Incube App"
   },
   "action": {
     "createBase": "Create a base",

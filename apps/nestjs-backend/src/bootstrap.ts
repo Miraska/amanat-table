@@ -54,7 +54,7 @@ export async function setUpAppMiddleware(app: INestApplication, configService: C
     const redocOptions: RedocOptions = {
       logo: {
         backgroundColor: '#F0F0F0',
-        altText: 'Amanat logo',
+        altText: 'Incube logo',
       },
     };
     await RedocModule.setup('/redocs', app, openApiDocumentation as OpenAPIObject, redocOptions);

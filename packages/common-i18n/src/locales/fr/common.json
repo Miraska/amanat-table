@@ -1,5 +1,5 @@
 {
-  "brand": "Teable",
+  "brand": "Incube",
   "actions": {
     "title": "Fonctionner",
     "save": "Sauvegarder",
@@ -111,7 +111,7 @@
       "revoke": "Révoquer",
       "owner": "Propriétaire par {{user}}",
       "revokeTitle": "Êtes-vous sûr de vouloir révoquer l'autorisation ?",
-      "revokeDesc": "{{name}} ne pourra plus accéder à l'API Teable. Vous ne pouvez pas annuler cette action.",
+      "revokeDesc": "{{name}} ne pourra plus accéder à l'API Incube. Vous ne pouvez pas annuler cette action.",
       "scopeTitle": "Autorisations",
       "scopeDesc": "Cette application pourra obtenir les autorisations suivantes :"
     }
@@ -149,7 +149,7 @@
     "done": "Terminé",
     "skip": "Passer",
     "createSpaceTooltipTitle": "Créer un espace",
-    "createSpaceTooltipContent": "Teable est organisé en espaces, où chaque espace invite les utilisateurs à collaborer. <br></br>Les espaces dans Teable servent d'élément de navigation principal dans la barre de menu, offrant une plateforme fondamentale pour que les utilisateurs ajoutent et gèrent des bases de données selon leurs besoins.",
+    "createSpaceTooltipContent": "Incube est organisé en espaces, où chaque espace invite les utilisateurs à collaborer. <br></br>Les espaces dans Incube servent d'élément de navigation principal dans la barre de menu, offrant une plateforme fondamentale pour que les utilisateurs ajoutent et gèrent des bases de données selon leurs besoins.",
     "createBaseTooltipTitle": "Créer une base",
     "createBaseTooltipContent": "Une base (abrégé de \"base de données\") est un endroit pour stocker des données importantes et les flux de travail qui en dépendent.",
     "createTableTooltipTitle": "Créer une table",
@@ -163,7 +163,7 @@
     "viewGroupingTooltipTitle": "Groupement des enregistrements",
     "viewGroupingTooltipContent": "Le groupement des enregistrements permet aux créateurs de construire un ensemble d'une ou plusieurs conditions qui aideront à catégoriser l'ensemble de données présenté dans une vue particulière.",
     "apiButtonTooltipTitle": "API",
-    "apiButtonTooltipContent": "Teable propose une API puissante qui prend en charge presque toutes les fonctionnalités du produit, permettant aux développeurs de faire des appels en utilisant un <a>Jeton</a>."
+    "apiButtonTooltipContent": "Incube propose une API puissante qui prend en charge presque toutes les fonctionnalités du produit, permettant aux développeurs de faire des appels en utilisant un <a>Jeton</a>."
   },
   "token": "Jeton",
   "poweredBy": "Propulsé par <0></0>",

@@ -377,19 +377,19 @@
     },
     "CONCATENATE": {
       "summary": "Joins ensemble divers types de valeurs en une seule valeur texte.",
-      "example": "CONCATENATE(\"Hello \", \"Teable\") => Hello Teable"
+      "example": "CONCATENATE(\"Hello \", \"Incube\") => Hello Incube"
     },
     "FIND": {
       "summary": "Trouve une occurrence de stringToFind dans la chaîne whereToSearch en commençant à partir de la position startFromPosition (startFromPosition est 0 par défaut). Si aucune occurrence de stringToFind n'est trouvée, le résultat sera 0.",
-      "example": "FIND(\"Teable\", \"Hello Teable\") => 7\nFIND(\"Teable\", \"Hello Teable\", 5) => 7\nFIND(\"Teable\", \"Hello Teable\", 10) => 0"
+      "example": "FIND(\"Incube\", \"Hello Incube\") => 7\nFIND(\"Incube\", \"Hello Incube\", 5) => 7\nFIND(\"Incube\", \"Hello Incube\", 10) => 0"
     },
     "SEARCH": {
       "summary": "Recherche une occurrence de stringToFind dans la chaîne whereToSearch en commençant à partir de la position startFromPosition (startFromPosition est 0 par défaut). Si aucune occurrence de stringToFind n'est trouvée, le résultat sera vide.\nSemblable à FIND(), bien que FIND() renvoie 0 au lieu de vide si aucune occurrence de stringToFind n'est trouvée.",
-      "example": "SEARCH(\"Teable\", \"Hello Teable\") => 7\nSEARCH(\"Teable\", \"Hello Teable\", 5) => 7\nSEARCH(\"Teable\", \"Hello Teable\", 10) => \"\""
+      "example": "SEARCH(\"Incube\", \"Hello Incube\") => 7\nSEARCH(\"Incube\", \"Hello Incube\", 5) => 7\nSEARCH(\"Incube\", \"Hello Incube\", 10) => \"\""
     },
     "MID": {
       "summary": "Extrait une sous-chaîne de count caractères en commençant à whereToStart.",
-      "example": "MID(\"Hello Teable\", 6, 6) => \"Teable\""
+      "example": "MID(\"Hello Incube\", 6, 6) => \"Incube\""
     },
     "LEFT": {
       "summary": "Extrait howMany caractères du début de la chaîne.",
@@ -401,23 +401,23 @@
     },
     "REPLACE": {
       "summary": "Remplace le nombre de caractères commençant à partir du caractère start par le texte de remplacement.\n(Si vous recherchez un moyen de trouver et de remplacer toutes les occurrences de old_text par new_text, voir SUBSTITUTE().)",
-      "example": "REPLACE(\"Hello Table\", 7, 5, \"Teable\") => \"Hello Teable\""
+      "example": "REPLACE(\"Hello Table\", 7, 5, \"Incube\") => \"Hello Incube\""
     },
     "REGEXP_REPLACE": {
       "summary": "Remplace toutes les sous-chaînes correspondant à l'expression régulière par le remplacement.",
-      "example": "REGEXP_REPLACE(\"Hello Table\", \"H.* \", \"\") => \"Teable\""
+      "example": "REGEXP_REPLACE(\"Hello Table\", \"H.* \", \"\") => \"Incube\""
     },
     "SUBSTITUTE": {
       "summary": "Remplace les occurrences de old_text par new_text.\nVous pouvez optionnellement spécifier un numéro d'index (commençant à 1) pour remplacer juste une occurrence spécifique de old_text. Si aucun numéro d'index n'est spécifié, toutes les occurrences de old_text seront remplacées.",
-      "example": "SUBSTITUTE(\"Hello Table\", \"Table\", \"Teable\") => \"Hello Teable\""
+      "example": "SUBSTITUTE(\"Hello Table\", \"Table\", \"Incube\") => \"Hello Incube\""
     },
     "LOWER": {
       "summary": "Met une chaîne en minuscules.",
-      "example": "LOWER(\"Hello Teable\") => \"hello teable\""
+      "example": "LOWER(\"Hello Incube\") => \"hello teable\""
     },
     "UPPER": {
       "summary": "Met une chaîne en majuscules.",
-      "example": "UPPER(\"Hello Teable\") => \"HELLO TEABLE\""
+      "example": "UPPER(\"Hello Incube\") => \"HELLO TEABLE\""
     },
     "REPT": {
       "summary": "Répète une chaîne un nombre spécifié de fois.",
@@ -437,7 +437,7 @@
     },
     "ENCODE_URL_COMPONENT": {
       "summary": "Remplace certains caractères par des équivalents encodés pour l'utilisation dans la construction d'URL ou d'URI. N'encode pas les caractères suivants : - _ . ~",
-      "example": "ENCODE_URL_COMPONENT(\"Hello Teable\") => \"Hello%20Teable\""
+      "example": "ENCODE_URL_COMPONENT(\"Hello Incube\") => \"Hello%20Teable\""
     },
     "IF": {
       "summary": "Renvoie value1 si l'argument logique est vrai, sinon renvoie value2. Peut également être utilisé pour créer des instructions IF imbriquées.\nPeut également être utilisé pour vérifier si une cellule est vide.",
@@ -577,15 +577,15 @@
     },
     "COUNTALL": {
       "summary": "Renvoie le nombre total d'éléments, y compris les textes et les cases vides.",
-      "example": "COUNTALL(100, 200, \"\", \"Teable\", TRUE()) => 5"
+      "example": "COUNTALL(100, 200, \"\", \"Incube\", TRUE()) => 5"
     },
     "COUNTA": {
       "summary": "Renvoie le nombre de valeurs non vides. Cette fonction compte à la fois les valeurs numériques et textuelles.",
-      "example": "COUNTA(100, 200, 300, \"\", \"Teable\", TRUE) => 4"
+      "example": "COUNTA(100, 200, 300, \"\", \"Incube\", TRUE) => 4"
     },
     "COUNT": {
       "summary": "Renvoie le nombre d'éléments numériques.",
-      "example": "COUNT(100, 200, 300, \"\", \"Teable\", TRUE) => 3"
+      "example": "COUNT(100, 200, 300, \"\", \"Incube\", TRUE) => 3"
     },
     "ARRAY_JOIN": {
       "summary": "Joint le tableau des éléments rollup en une chaîne avec un séparateur.",

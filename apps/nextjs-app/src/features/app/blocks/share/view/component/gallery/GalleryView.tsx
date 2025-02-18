@@ -24,7 +24,7 @@ export const GalleryView = () => {
           <h1 className="font-semibold md:text-lg">{view?.name}</h1>
           <a href="/" className="flex items-center">
             <TeableNew className="text-black md:text-2xl" />
-            <p className="ml-1 font-semibold">Amanat</p>
+            <p className="ml-1 font-semibold">Incube</p>
           </a>
         </div>
       )}

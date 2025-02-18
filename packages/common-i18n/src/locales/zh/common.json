@@ -1,5 +1,5 @@
 {
-  "brand": "Teable",
+  "brand": "Incube",
   "actions": {
     "add": "添加",
     "title": "操作",
@@ -138,7 +138,7 @@
       "revoke": "撤销",
       "owner": "{{user}} 所有",
       "revokeTitle": "您确定要撤销授权吗？",
-      "revokeDesc": "{{name}} 将不再能够访问 Teable API。此操作无法撤销。",
+      "revokeDesc": "{{name}} 将不再能够访问 Incube API。此操作无法撤销。",
       "scopeTitle": "权限",
       "scopeDesc": "此应用程序将能够获取以下权限："
     }
@@ -194,7 +194,7 @@
     "viewGroupingTooltipTitle": "记录分组",
     "viewGroupingTooltipContent": "记录分组允许创建者构建一组一个或多个条件，这将有助于对特定视图中呈现的数据集进行分类。",
     "apiButtonTooltipTitle": "API",
-    "apiButtonTooltipContent": "Teable 提供了强大的 API，支持几乎所有的产品功能，允许开发者使用<a>令牌</a>进行调用。"
+    "apiButtonTooltipContent": "Incube 提供了强大的 API，支持几乎所有的产品功能，允许开发者使用<a>令牌</a>进行调用。"
   },
   "token": "令牌",
   "poweredBy": "<0></0> 提供技术支持",

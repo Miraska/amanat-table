@@ -1,7 +1,7 @@
 {
   "initialSpaceName": "{{name}}的空间",
   "page": {
-    "title": "Teable App"
+    "title": "Incube App"
   },
   "action": {
     "createBase": "创建数据库",

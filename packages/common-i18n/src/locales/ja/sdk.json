@@ -364,19 +364,19 @@
     },
     "CONCATENATE": {
       "summary": "さまざまな値のタイプの引数を 1つのテキスト値に結合します。",
-      "example": "CONCATENATE(\"Hello \", \"Teable\") => Hello Teable"
+      "example": "CONCATENATE(\"Hello \", \"Incube\") => Hello Incube"
     },
     "FIND": {
       "summary": "オプションの startFromPosition から始まる whereToSearch 文字列内で stringToFind の出現を検索します（ startFromPosition はデフォルトで0です）。stringToFind の出現が見つからない場合、結果は0になります。",
-      "example": "FIND(\"Teable\", \"Hello Teable\") => 7\nFIND(\"Teable\", \"Hello Teable\", 5) => 7\nFIND(\"Teable\", \"Hello Teable\", 10) => 0"
+      "example": "FIND(\"Incube\", \"Hello Incube\") => 7\nFIND(\"Incube\", \"Hello Incube\", 5) => 7\nFIND(\"Incube\", \"Hello Incube\", 10) => 0"
     },
     "SEARCH": {
       "summary": "stringToFind は、オプションの startFromPosition から whereToSearch 文字列内で stringToFind の出現を検索します。（startFromPosition はデフォルトで0です。）stringToFind の出現が見つからない場合、結果は空になります。\nFIND()と似ていますが、FIND() は stringToFind の出現が見つからない場合、空ではなく0を返します。",
-      "example": "SEARCH(\"Teable\", \"Hello Teable\") => 7\nSEARCH(\"Teable\", \"Hello Teable\", 5) => 7\nSEARCH(\"Teable\", \"Hello Teable\", 10) => \"\""
+      "example": "SEARCH(\"Incube\", \"Hello Incube\") => 7\nSEARCH(\"Incube\", \"Hello Incube\", 5) => 7\nSEARCH(\"Incube\", \"Hello Incube\", 10) => \"\""
     },
     "MID": {
       "summary": "whereToStart から始まるcount文字の部分文字列を抽出します。",
-      "example": "MID(\"Hello Teable\", 6, 6) => \"Teable\""
+      "example": "MID(\"Hello Incube\", 6, 6) => \"Incube\""
     },
     "LEFT": {
       "summary": "文字列の先頭から howMany 文字を抽出します。",
@@ -388,23 +388,23 @@
     },
     "REPLACE": {
       "summary": "開始文字から始まる文字数を置換テキストに置き換えます。\n(old_text のすべての出現箇所を検索して new_text に置き換える方法を探している場合は、SUBSTITUTE() を参照してください。)",
-      "example": "REPLACE(\"Hello Table\", 7, 5, \"Teable\") => \"Hello Teable\""
+      "example": "REPLACE(\"Hello Table\", 7, 5, \"Incube\") => \"Hello Incube\""
     },
     "REGEXP_REPLACE": {
       "summary": "正規表現に一致するすべての部分文字列を置換文字列に置き換えます。",
-      "example": "REGEXP_REPLACE(\"Hello Table\", \"H.* \", \"\") => \"Teable\""
+      "example": "REGEXP_REPLACE(\"Hello Table\", \"H.* \", \"\") => \"Incube\""
     },
     "SUBSTITUTE": {
       "summary": "old_text の出現箇所を new_text に置き換えます。\nオプションでインデックス番号 (1 から始まる) を指定して、old_text の特定の出現箇所のみを置き換えることができます。インデックス番号を指定しないと、old_text のすべての出現箇所が置き換えられます。",
-      "example": "SUBSTITUTE(\"Hello Table\", \"Table\", \"Teable\") => \"Hello Teable\""
+      "example": "SUBSTITUTE(\"Hello Table\", \"Table\", \"Incube\") => \"Hello Incube\""
     },
     "LOWER": {
       "summary": "文字列を小文字にします。",
-      "example": "LOWER(\"Hello Teable\") => \"hello teable\""
+      "example": "LOWER(\"Hello Incube\") => \"hello teable\""
     },
     "UPPER": {
       "summary": "文字列を大文字にします。",
-      "example": "UPPER(\"Hello Teable\") => \"HELLO TEABLE\""
+      "example": "UPPER(\"Hello Incube\") => \"HELLO TEABLE\""
     },
     "REPT": {
       "summary": "文字列を指定された回数繰り返します。",
@@ -424,7 +424,7 @@
     },
     "ENCODE_URL_COMPONENT": {
       "summary": "URL または URI の構築に使用するために、特定の文字をエンコードされた同等の文字に置き換えます。次の文字はエンコードされません: - _ . ~",
-      "example": "ENCODE_URL_COMPONENT(\"Hello Teable\") => \"Hello%20Teable\""
+      "example": "ENCODE_URL_COMPONENT(\"Hello Incube\") => \"Hello%20Teable\""
     },
     "IF": {
       "summary": "論理引数が true の場合は 値1 を返し、そうでない場合は 値2 を返します。ネストされた IFステートメントを作成するためにも使用できます。\nセルが空白かどうかを確認するためにも使用できます。",
@@ -564,15 +564,15 @@
     },
     "COUNTALL": {
       "summary": "テキストと空白を含むすべての要素の数を返します。",
-      "example": "COUNTALL(100, 200, \"\", \"Teable\", TRUE()) => 5"
+      "example": "COUNTALL(100, 200, \"\", \"Incube\", TRUE()) => 5"
     },
     "COUNTA": {
       "summary": "空でない値の数を返します。この関数は数値とテキスト値の両方をカウントします。",
-      "example": "COUNTA(100, 200, 300, \"\", \"Teable\", TRUE) => 4"
+      "example": "COUNTA(100, 200, 300, \"\", \"Incube\", TRUE) => 4"
     },
     "COUNT": {
       "summary": "数値の数を返します。",
-      "example": "COUNT(100, 200, 300, \"\", \"Teable\", TRUE) => 3"
+      "example": "COUNT(100, 200, 300, \"\", \"Incube\", TRUE) => 3"
     },
     "ARRAY_JOIN": {
       "summary": "ロールアップ項目の配列をセパレーターを使用して文字列に結合します。",

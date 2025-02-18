@@ -1,7 +1,7 @@
 {
   "initialSpaceName": "Espace de {{name}}",
   "page": {
-    "title": "Application Teable"
+    "title": "Application Incube"
   },
   "action": {
     "createBase": "Créer une base",

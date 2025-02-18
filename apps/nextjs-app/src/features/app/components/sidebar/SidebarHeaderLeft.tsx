@@ -31,7 +31,7 @@ export const SidebarHeaderLeft = (props: ISidebarBackButtonProps) => {
         displayIcon
       )}
 
-      <p className="ml-[2px] truncate text-sm">{title ?? 'Amanat'}</p>
+      <p className="ml-[2px] truncate text-sm">{title ?? 'Incube'}</p>
     </>
   );
 };

@@ -380,19 +380,19 @@
     },
     "CONCATENATE": {
       "summary": "Объединяет различные типы аргументов в одну текстовую строку.",
-      "example": "CONCATENATE(\"Hello \", \"Teable\") => Hello Teable"
+      "example": "CONCATENATE(\"Hello \", \"Incube\") => Hello Incube"
     },
     "FIND": {
       "summary": "Находит вхождение строки stringToFind в строке whereToSearch, начиная с опциональной позиции startFromPosition. Если вхождение не найдено, результат будет 0.",
-      "example": "FIND(\"Teable\", \"Hello Teable\") => 7\nFIND(\"Teable\", \"Hello Teable\", 5) => 7\nFIND(\"Teable\", \"Hello Teable\", 10) => 0"
+      "example": "FIND(\"Incube\", \"Hello Incube\") => 7\nFIND(\"Incube\", \"Hello Incube\", 5) => 7\nFIND(\"Incube\", \"Hello Incube\", 10) => 0"
     },
     "SEARCH": {
       "summary": "Ищет вхождение строки stringToFind в строке whereToSearch, начиная с опциональной позиции startFromPosition. Если вхождение не найдено, результат будет пустым.",
-      "example": "SEARCH(\"Teable\", \"Hello Teable\") => 7\nSEARCH(\"Teable\", \"Hello Teable\", 5) => 7\nSEARCH(\"Teable\", \"Hello Teable\", 10) => \"\""
+      "example": "SEARCH(\"Incube\", \"Hello Incube\") => 7\nSEARCH(\"Incube\", \"Hello Incube\", 5) => 7\nSEARCH(\"Incube\", \"Hello Incube\", 10) => \"\""
     },
     "MID": {
       "summary": "Извлекает подстроку длиной count символов, начиная с позиции whereToStart.",
-      "example": "MID(\"Hello Teable\", 6, 6) => \"Teable\""
+      "example": "MID(\"Hello Incube\", 6, 6) => \"Incube\""
     },
     "LEFT": {
       "summary": "Извлекает howMany символов с начала строки.",
@@ -404,23 +404,23 @@
     },
     "REPLACE": {
       "summary": "Заменяет количество символов, начиная с указанной позиции, на текст замены.",
-      "example": "REPLACE(\"Hello Table\", 7, 5, \"Teable\") => \"Hello Teable\""
+      "example": "REPLACE(\"Hello Table\", 7, 5, \"Incube\") => \"Hello Incube\""
     },
     "REGEXP_REPLACE": {
       "summary": "Заменяет все подстроки, совпадающие с регулярным выражением, на текст замены.",
-      "example": "REGEXP_REPLACE(\"Hello Table\", \"H.* \", \"\") => \"Teable\""
+      "example": "REGEXP_REPLACE(\"Hello Table\", \"H.* \", \"\") => \"Incube\""
     },
     "SUBSTITUTE": {
       "summary": "Заменяет вхождения old_text на new_text. Можно указать индекс для замены конкретного вхождения old_text.",
-      "example": "SUBSTITUTE(\"Hello Table\", \"Table\", \"Teable\") => \"Hello Teable\""
+      "example": "SUBSTITUTE(\"Hello Table\", \"Table\", \"Incube\") => \"Hello Incube\""
     },
     "LOWER": {
       "summary": "Преобразует строку в нижний регистр.",
-      "example": "LOWER(\"Hello Teable\") => \"hello teable\""
+      "example": "LOWER(\"Hello Incube\") => \"hello teable\""
     },
     "UPPER": {
       "summary": "Преобразует строку в верхний регистр.",
-      "example": "UPPER(\"Hello Teable\") => \"HELLO TEABLE\""
+      "example": "UPPER(\"Hello Incube\") => \"HELLO TEABLE\""
     },
     "REPT": {
       "summary": "Повторяет строку указанное количество раз.",
@@ -440,7 +440,7 @@
     },
     "ENCODE_URL_COMPONENT": {
       "summary": "Кодирует определенные символы для использования в URL или URI. Не кодирует следующие символы: - _ . ~",
-      "example": "ENCODE_URL_COMPONENT(\"Hello Teable\") => \"Hello%20Teable\""
+      "example": "ENCODE_URL_COMPONENT(\"Hello Incube\") => \"Hello%20Teable\""
     },
     "IF": {
       "summary": "Возвращает value1, если логическое условие истинно, иначе возвращает value2. Также может использоваться для составления вложенных условий IF.",
@@ -580,15 +580,15 @@
     },
     "COUNTALL": {
       "summary": "Возвращает количество всех элементов, включая текст и пустые значения.",
-      "example": "COUNTALL(100, 200, \"\", \"Teable\", TRUE()) => 5"
+      "example": "COUNTALL(100, 200, \"\", \"Incube\", TRUE()) => 5"
     },
     "COUNTA": {
       "summary": "Возвращает количество непустых значений.",
-      "example": "COUNTA(100, 200, 300, \"\", \"Teable\", TRUE) => 4"
+      "example": "COUNTA(100, 200, 300, \"\", \"Incube\", TRUE) => 4"
     },
     "COUNT": {
       "summary": "Возвращает количество числовых элементов.",
-      "example": "COUNT(100, 200, 300, \"\", \"Teable\", TRUE) => 3"
+      "example": "COUNT(100, 200, 300, \"\", \"Incube\", TRUE) => 3"
     },
     "ARRAY_JOIN": {
       "summary": "Объединяет массив элементов в строку с указанным разделителем.",

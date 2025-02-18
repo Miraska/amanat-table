@@ -397,19 +397,19 @@
     },
     "CONCATENATE": {
       "summary": "将各种类型的参数连接成单个文本值。",
-      "example": "CONCATENATE(\"Hello \", \"Teable\") => Hello Teable"
+      "example": "CONCATENATE(\"Hello \", \"Incube\") => Hello Incube"
     },
     "FIND": {
       "summary": "从可选的 startFromPosition 开始，在 whereToSearch 字符串中查找 stringToFind 的出现位置。（startFromPosition 默认为 0。）如果未找到 stringToFind，结果将为 0。",
-      "example": "FIND(\"Teable\", \"Hello Teable\") => 7\nFIND(\"Teable\", \"Hello Teable\", 5) => 7\nFIND(\"Teable\", \"Hello Teable\", 10) => 0"
+      "example": "FIND(\"Incube\", \"Hello Incube\") => 7\nFIND(\"Incube\", \"Hello Incube\", 5) => 7\nFIND(\"Incube\", \"Hello Incube\", 10) => 0"
     },
     "SEARCH": {
       "summary": "从可选的 startFromPosition 开始，在 whereToSearch 字符串中搜索 stringToFind 的出现位置。（startFromPosition 默认为 0。）如果未找到 stringToFind，结果将为空。\n与 FIND() 类似，但如果未找到 stringToFind，FIND() 返回 0 而不是空。",
-      "example": "SEARCH(\"Teable\", \"Hello Teable\") => 7\nSEARCH(\"Teable\", \"Hello Teable\", 5) => 7\nSEARCH(\"Teable\", \"Hello Teable\", 10) => \"\""
+      "example": "SEARCH(\"Incube\", \"Hello Incube\") => 7\nSEARCH(\"Incube\", \"Hello Incube\", 5) => 7\nSEARCH(\"Incube\", \"Hello Incube\", 10) => \"\""
     },
     "MID": {
       "summary": "从 whereToStart 开始提取 count 个字符的子字符串。",
-      "example": "MID(\"Hello Teable\", 6, 6) => \"Teable\""
+      "example": "MID(\"Hello Incube\", 6, 6) => \"Incube\""
     },
     "LEFT": {
       "summary": "从字符串开头提取 howMany 个字符。",
@@ -421,23 +421,23 @@
     },
     "REPLACE": {
       "summary": "用替换文本替换从起始字符开始的指定数量的字符。\n（如果你想查找并替换所有出现的 old_text 为 new_text，请参见 SUBSTITUTE()。）",
-      "example": "REPLACE(\"Hello Table\", 7, 5, \"Teable\") => \"Hello Teable\""
+      "example": "REPLACE(\"Hello Table\", 7, 5, \"Incube\") => \"Hello Incube\""
     },
     "REGEXP_REPLACE": {
       "summary": "用替换文本替换所有匹配正则表达式的子字符串。",
-      "example": "REGEXP_REPLACE(\"Hello Table\", \"H.* \", \"\") => \"Teable\""
+      "example": "REGEXP_REPLACE(\"Hello Table\", \"H.* \", \"\") => \"Incube\""
     },
     "SUBSTITUTE": {
       "summary": "替换 old_text 的出现为 new_text。\n你可以选择指定一个索引号（从 1 开始）来仅替换特定出现的 old_text。如果未指定索引号，则将替换所有出现的 old_text。",
-      "example": "SUBSTITUTE(\"Hello Table\", \"Table\", \"Teable\") => \"Hello Teable\""
+      "example": "SUBSTITUTE(\"Hello Table\", \"Table\", \"Incube\") => \"Hello Incube\""
     },
     "LOWER": {
       "summary": "将字符串转换为小写。",
-      "example": "LOWER(\"Hello Teable\") => \"hello teable\""
+      "example": "LOWER(\"Hello Incube\") => \"hello teable\""
     },
     "UPPER": {
       "summary": "将字符串转换为大写。",
-      "example": "UPPER(\"Hello Teable\") => \"HELLO TEABLE\""
+      "example": "UPPER(\"Hello Incube\") => \"HELLO TEABLE\""
     },
     "REPT": {
       "summary": "将字符串重复指定的次数。",
@@ -457,7 +457,7 @@
     },
     "ENCODE_URL_COMPONENT": {
       "summary": "将某些字符替换为编码等效项，用于构造 URL 或 URI。不编码以下字符：- _ . ~",
-      "example": "ENCODE_URL_COMPONENT(\"Hello Teable\") => \"Hello%20Teable\""
+      "example": "ENCODE_URL_COMPONENT(\"Hello Incube\") => \"Hello%20Teable\""
     },
     "IF": {
       "summary": "如果逻辑参数为真，则返回 value1，否则返回 value2。也可用于制作嵌套的 IF 语句。\n还可用于检查单元格是否为空/是否为空。",
@@ -597,15 +597,15 @@
     },
     "COUNTALL": {
       "summary": "返回包括文本和空白在内的所有元素的数量。",
-      "example": "COUNTALL(100, 200, \"\", \"Teable\", TRUE()) => 5"
+      "example": "COUNTALL(100, 200, \"\", \"Incube\", TRUE()) => 5"
     },
     "COUNTA": {
       "summary": "返回非空值的数量。此函数同时计算数字和文本值。",
-      "example": "COUNTA(100, 200, 300, \"\", \"Teable\", TRUE) => 4"
+      "example": "COUNTA(100, 200, 300, \"\", \"Incube\", TRUE) => 4"
     },
     "COUNT": {
       "summary": "返回数字项的数量。",
-      "example": "COUNT(100, 200, 300, \"\", \"Teable\", TRUE) => 3"
+      "example": "COUNT(100, 200, 300, \"\", \"Incube\", TRUE) => 3"
     },
     "ARRAY_JOIN": {
       "summary": "使用分隔符将汇总项数组连接成一个字符串。",

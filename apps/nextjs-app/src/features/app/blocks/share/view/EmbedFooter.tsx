@@ -23,7 +23,7 @@ export const EmbedFooter = ({
       {!hideBranding && (
         <Link href="/" className="flex items-center gap-1" target="_blank">
           <TeableNew className="size-4 text-black" />
-          Amanat
+          Incube
         </Link>
       )}
       {!hideNewPage && (

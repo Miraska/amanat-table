@@ -61,7 +61,7 @@ export const DashboardHeader = (props: { dashboardId: string }) => {
   return (
     <div className="flex h-16 shrink-0 items-center justify-between border-b px-4">
       <Head>
-        <title>{selectedDashboard?.name ? `${selectedDashboard?.name} - Amanat` : 'Amanat'}</title>
+        <title>{selectedDashboard?.name ? `${selectedDashboard?.name} - Incube` : 'Incube'}</title>
       </Head>
       <DashboardSwitcher
         className={cn('w-44', {
