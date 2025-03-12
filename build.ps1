@@ -302,6 +302,16 @@ switch ($Action) {
         Write-Host "  sqlite.mode               - Migrate & generate prisma for sqlite"
         Write-Host "  postgres.mode             - Migrate & generate prisma for postgres"
         Write-Host "  switch-db                 - Interactive DB switch"
+        Write-Host "  dev                       - Switch to sqlite, cd nestjs-backend, run dev"
+        break
+    }
+
+    # ---- Dev ----
+    "dev" {
+        .\build.ps1 sqlite.mode
+        Push-Location ".\apps\nestjs-backend"
+        pnpm dev
+        Pop-Location
         break
     }
 

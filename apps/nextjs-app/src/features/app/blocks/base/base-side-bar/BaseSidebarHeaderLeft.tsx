@@ -73,7 +73,7 @@ export const BaseSidebarHeaderLeft = () => {
   return (
     <div className="flex max-w-[calc(100%-28px)] shrink grow items-center">
       <div
-        className="relative mr-2 size-6 shrink-0 cursor-pointer"
+        className="relative mr-2 size-4 shrink-0 cursor-pointer"
         onClick={backSpace}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {

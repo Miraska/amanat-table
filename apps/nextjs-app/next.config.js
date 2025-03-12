@@ -84,17 +84,21 @@ const secureHeaders = createSecureHeaders({
             "'self'",
             "'unsafe-eval'",
             "'unsafe-inline'",
+            'http://127.0.0.1:3000',
             'https://www.clarity.ms',
             'https://*.teable.io',
             'https://*.teable.cn',
+            'https://cswrljhh-3000.euw.devtunnels.ms/',
           ],
           frameSrc: ["'self'", 'blob:'],
           connectSrc: [
             "'self'",
-            'https://*.sentry.io',
+            'http://127.0.0.1:3000',
             'https://*.teable.io',
             'https://*.teable.cn',
             'https://*.clarity.ms',
+            'https://*.clarity.ms',
+            'https://cswrljhh-3000.euw.devtunnels.ms/',
           ],
           mediaSrc: ["'self'", 'https:', 'http:', 'data:'],
           imgSrc: ["'self'", 'https:', 'http:', 'data:'],
@@ -240,6 +244,12 @@ const nextConfig = {
       config.resolve.fallback = { ...config.resolve.fallback, fs: false };
     }
 
+    // Добавляем alias для @codemirror/state
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@codemirror/state': path.resolve(__dirname, 'node_modules/@codemirror/state'),
+    };
+
     // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/tree-shaking/
     config.plugins.push(
       new webpack.DefinePlugin({
@@ -279,6 +289,7 @@ const nextConfig = {
     APP_VERSION: packageJson.version ?? 'not-in-package.json',
     BUILD_TIME: new Date().toISOString(),
   },
+  transpilePackages: ['@uiw/react-codemirror', '@uiw/codemirror-extensions-basic-setup'],
 };
 
 let config = nextConfig;

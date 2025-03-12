@@ -28,6 +28,7 @@ export class AttachmentsController {
 
   @Put('/upload/:token')
   async uploadFilePut(@Req() req: Request, @Param('token') token: string) {
+    console.log(token + ' TOKEN');
     await this.attachmentsService.upload(req, token);
     return null;
   }
