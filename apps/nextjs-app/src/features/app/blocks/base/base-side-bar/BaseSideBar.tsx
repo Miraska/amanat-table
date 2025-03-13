@@ -71,7 +71,7 @@ export const BaseSideBar = () => {
           Icon: Bot,
           hidden: !basePermission?.['automation|read'],
           disabled: !automationEnable,
-        }
+        },
       ].filter((item) => !item.hidden),
     [advancedPermissionsEnable, automationEnable, baseId, basePermission, t]
   );

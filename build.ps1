@@ -6,7 +6,8 @@
       .\build.ps1 postgres.mode
       .\build.ps1 docker.up teable-postgres
       .\build.ps1 docker.await teable-postgres
-      .\build.ps1 switch-db-mode
+      .\build.ps1 switch-db
+      .\build.ps1 build.app
       .\build.ps1 help
 #>
 
@@ -95,7 +96,7 @@ function Docker-RmNetwork {
 function Get-ComposeArgs {
     # Находим все *.yml в ./dockers
     $composeFiles = Get-ChildItem -Path "./dockers" -Filter "*.yml" -File | ForEach-Object { "-f `"$($_.FullName)`"" }
-    # Если есть .env в ./dockers/.env
+    # Если есть .env в ./dockers
     $composeEnv = ""
     if (Test-Path "./dockers/.env") {
         $composeEnv = "--env-file `".\dockers\.env`""
@@ -192,24 +193,13 @@ function Docker-Await([string[]]$services) {
 function Activate-SqliteMode {
     Info "Activating sqlite.mode" $Colors.BLUE
 
-    # Переопределяем переменную окружения для SQLite,
-    # чтобы точно было "file:..." и избежать ошибки P1012.
+    # Переопределяем переменную окружения для SQLite
     $env:PRISMA_DATABASE_URL = $env:SQLITE_PRISMA_DATABASE_URL
 
     Push-Location .\packages\db-main-prisma
 
-    # Предполагается, что package.json в этой папке содержит:
-    #   "scripts": {
-    #     "prisma-generate": "prisma generate",
-    #     "prisma-migrate": "prisma migrate"
-    #   }
-    # Тогда:
     pnpm prisma-generate --schema .\prisma\sqlite\schema.prisma
     pnpm prisma-migrate deploy --schema .\prisma\sqlite\schema.prisma
-
-    # Если таких скриптов нет, замените на:
-    # pnpm exec prisma generate --schema .\prisma\sqlite\schema.prisma
-    # pnpm exec prisma migrate deploy --schema .\prisma\sqlite\schema.prisma
 
     Pop-Location
 }
@@ -225,13 +215,11 @@ function Activate-PostgresMode {
     pnpm prisma-generate --schema .\prisma\postgres\schema.prisma
     pnpm prisma-migrate deploy --schema .\prisma\postgres\schema.prisma
 
-    # Либо через "pnpm exec prisma ..." – если нет алиасов
-
     Pop-Location
 }
 
 # ----------------------------------------------------------------------------
-# ПРИМЕР "switch-db-mode" (интерактивный)
+# ПРИМЕР "switch-db" (интерактивный)
 # ----------------------------------------------------------------------------
 
 function Switch-DbMode {
@@ -284,25 +272,47 @@ switch ($Action) {
     "docker.run"     { Docker-Run $Args; break }
     "docker.await"   { Docker-Await $Args; break }
 
+    # ---- Build target ----
+    "build.app" {
+        if (-not (Get-Command zx -ErrorAction SilentlyContinue)) {
+            Info "zx not found, attempting to run 'pnpm setup' and install zx globally" $Colors.YELLOW
+            pnpm setup
+            pnpm add -g zx
+            # Если задана переменная PNPM_HOME, добавляем её в PATH
+            if ($env:PNPM_HOME) {
+                $env:PATH = "$env:PNPM_HOME;$env:PATH"
+            }
+        }
+        if (-not (Get-Command zx -ErrorAction SilentlyContinue)) {
+            ErrorMsg "zx is still not found. Please ensure PNPM_HOME is set and the global bin directory is in your PATH."
+            exit 1
+        }
+        $cmd = "zx scripts/build-image.mjs --file=dockers/teable/Dockerfile --tag=teable:develop"
+        Info "Executing: $cmd" $Colors.BLUE
+        iex $cmd
+        break
+    }
+
     # ---- DB modes ----
     "sqlite.mode"    { Activate-SqliteMode; break }
     "postgres.mode"  { Activate-PostgresMode; break }
-    "switch-db" { Switch-DbMode; break }
+    "switch-db"      { Switch-DbMode; break }
 
     # ---- Help ----
     "help" {
         Write-Host "Available Commands:" -ForegroundColor Cyan
         Write-Host "  docker.up <service>        - Start containers in background"
-        Write-Host "  docker.down               - Down/remove containers"
-        Write-Host "  docker.start <service>    - Start existing containers"
-        Write-Host "  docker.stop <service>     - Stop containers"
-        Write-Host "  docker.restart <service>  - Restart containers"
-        Write-Host "  docker.run <service> ...  - Run one-shot container"
-        Write-Host "  docker.await <service>    - Wait for container(s) health"
-        Write-Host "  sqlite.mode               - Migrate & generate prisma for sqlite"
-        Write-Host "  postgres.mode             - Migrate & generate prisma for postgres"
-        Write-Host "  switch-db                 - Interactive DB switch"
-        Write-Host "  dev                       - Switch to sqlite, cd nestjs-backend, run dev"
+        Write-Host "  docker.down                - Down/remove containers"
+        Write-Host "  docker.start <service>     - Start existing containers"
+        Write-Host "  docker.stop <service>      - Stop containers"
+        Write-Host "  docker.restart <service>   - Restart containers"
+        Write-Host "  docker.run <service> ...   - Run one-shot container"
+        Write-Host "  docker.await <service>     - Wait for container(s) health"
+        Write-Host "  build.app                  - Build docker image (teable:develop)"
+        Write-Host "  sqlite.mode                - Migrate & generate prisma for sqlite"
+        Write-Host "  postgres.mode              - Migrate & generate prisma for postgres"
+        Write-Host "  switch-db                - Interactive DB switch"
+        Write-Host "  dev                      - Switch to sqlite, cd nestjs-backend, run dev"
         break
     }
 

@@ -1,5 +1,5 @@
 import { createSecureHeaders } from 'next-secure-headers';
-import { UniverPlugin } from '@univerjs/webpack-plugin'
+import { UniverPlugin } from '@univerjs/webpack-plugin';
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = '/plugin';
@@ -8,13 +8,14 @@ const basePath = '/plugin';
 const nextConfig = {
   basePath,
   output: 'standalone',
-  plugins: [
-   new UniverPlugin()
-  ],
+  webpack: (config, { isServer }) => {
+    // Добавляем плагин через webpack
+    config.plugins.push(new UniverPlugin());
+    return config;
+  },
   async headers() {
     return [
       {
-        // All page routes, not the api ones
         source: '/:path((?!api).*)*',
         headers: [
           ...createSecureHeaders({
@@ -26,7 +27,7 @@ const nextConfig = {
               connectSrc: ["'self'", 'https:'],
               mediaSrc: ["'self'", 'https:', 'http:', 'data:'],
               imgSrc: ["'self'", 'https:', 'http:', 'data:'],
-            } 
+            }
           }),
           {
             key: 'Content-Security-Policy',
