@@ -8,11 +8,9 @@ const basePath = '/plugin';
 const nextConfig = {
   basePath,
   output: 'standalone',
-  webpack: (config, { isServer }) => {
-    // Добавляем плагин через webpack
-    config.plugins.push(new UniverPlugin());
-    return config;
-  },
+  plugins: [
+    new UniverPlugin()
+  ],
   async headers() {
     return [
       {
