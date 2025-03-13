@@ -9,7 +9,7 @@ const nextConfig = {
   basePath,
   output: 'standalone',
   plugins: [
-   new UniverPlugin()
+    new UniverPlugin()
   ],
   async headers() {
     return [
@@ -26,7 +26,7 @@ const nextConfig = {
               connectSrc: ["'self'", 'https:'],
               mediaSrc: ["'self'", 'https:', 'http:', 'data:'],
               imgSrc: ["'self'", 'https:', 'http:', 'data:'],
-            } 
+            }
           }),
           {
             key: 'Content-Security-Policy',
